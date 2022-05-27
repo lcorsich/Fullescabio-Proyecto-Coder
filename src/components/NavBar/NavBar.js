@@ -1,3 +1,5 @@
+import CartWitget from "../Cartwitget/Cartwitget";
+
 const NavBar = () => {
   return (
     <div class="title">
@@ -13,6 +15,9 @@ const NavBar = () => {
           FULLESCABIO
         </h1>
         <h3>Almacen de bebibas</h3>
+        <div>
+          <CartWitget />
+        </div>
         <div class="buttonstConteiner" style={{backgroundColor: "black"}}>
           <button class='btnCategoria' >Vinos</button>
           <button class='btnCategoria'>Espumantes</button>
@@ -22,6 +27,7 @@ const NavBar = () => {
           <button class='btnCategoria'>Ron</button>
           <button class='btnCategoria'>Vodka</button>
           <button class='btnCategoria'>Cervezas</button>
+          
         </div>
       </nav>
     </div>
