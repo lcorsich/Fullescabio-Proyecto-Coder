@@ -1,0 +1,11 @@
+.title{
+    background-Color: black;
+    padding: 10px;
+    color: white;
+}
+.menu_conteiner{
+    /* display: flex; */
+    background-Color:'black';
+    padding: 10px;
+    font-family: "Sans-Serif";
+}
