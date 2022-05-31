@@ -13,13 +13,9 @@ const NavBar = () => {
           </div>
           <div class="buttonstConteiner" style={{ backgroundColor: "black" }}>
             <button class="btnCategoria">Vinos</button>
-            <button class="btnCategoria">Espumantes</button>
+            <button class="btnCategoria">Cervezas</button>
             <button class="btnCategoria">Whiskies</button>
             <button class="btnCategoria">Gin</button>
-            <button class="btnCategoria">Aperitivos</button>
-            <button class="btnCategoria">Ron</button>
-            <button class="btnCategoria">Vodka</button>
-            <button class="btnCategoria">Cervezas</button>
           </div>
         </div>
       </nav>
