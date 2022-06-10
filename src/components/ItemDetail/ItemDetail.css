@@ -1,0 +1,6 @@
+.DetailItem{
+    display: flex;
+}
+.ImagenItem{
+    display: grid;
+}

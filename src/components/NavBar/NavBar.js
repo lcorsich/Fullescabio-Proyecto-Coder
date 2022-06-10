@@ -1,21 +1,24 @@
 import CartWitget from "../Cartwitget/Cartwitget";
 import "./NavBar.css";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <div >
+    <div>
       <nav>
-        <h1 class="title">FULLESCABIO</h1>
+        <Link to='/'>
+          <h1 className="title">FULLESCABIO</h1>
+        </Link>
         <h3>Almacen de bebibas</h3>
-        <div class="menu_conteiner">
+        <div className="menu_conteiner">
           <div>
             <CartWitget />
           </div>
-          <div class="buttonstConteiner" style={{ backgroundColor: "black" }}>
-            <button class="btnCategoria">Vinos</button>
-            <button class="btnCategoria">Cervezas</button>
-            <button class="btnCategoria">Whiskies</button>
-            <button class="btnCategoria">Gin</button>
+          <div className="categoryConteiner">
+            <Link to='/category/vinos'className="btnCategoria">Vinos</Link>
+            <Link to='/category/cervezas'className="btnCategoria">Cervezas</Link>
+            <Link to='/category/whiskies'className="btnCategoria">Whiskies</Link>
+            <Link to='/category/gin'className="btnCategoria">Gin</Link>
           </div>
         </div>
       </nav>

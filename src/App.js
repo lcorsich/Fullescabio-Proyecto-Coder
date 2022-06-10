@@ -1,14 +1,23 @@
 // import logo from './logo.svg';
 import "./App.css";
+import React from "react";
 import NavBar from "./components/NavBar/NavBar.js";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+import { BrowserRouter, Routes, Route, } from "react-router-dom";
+
 function App() {
   return (
-      <div className="App">
+    <div className="App">
+      <BrowserRouter>
         <NavBar />
-        <ItemListContainer greeting='Lista de productos'/>
-      </div>
-      
+        <Routes>
+          <Route path='/' element={<ItemListContainer />} />
+          <Route path='/detail/:productId' element={<ItemDetailContainer />} /> 
+          <Route path='/category/:categoryId' element={<ItemListContainer />} /> 
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 
