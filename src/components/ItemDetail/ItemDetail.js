@@ -6,7 +6,7 @@ const ItemDetail = ({ id, name, img, description2 }) => {
     <>
       <div className="DetailItem">
         <h2>{name}</h2>
-        <img src={img} />
+        <img className='ImagenItem'src={img} alt='' />
         <div>{description2}</div>
       </div>
     </>

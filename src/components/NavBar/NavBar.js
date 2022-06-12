@@ -1,6 +1,6 @@
 import CartWitget from "../Cartwitget/Cartwitget";
 import "./NavBar.css";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
@@ -15,10 +15,10 @@ const NavBar = () => {
             <CartWitget />
           </div>
           <div className="categoryConteiner">
-            <Link to='/category/vinos'className="btnCategoria">Vinos</Link>
-            <Link to='/category/cervezas'className="btnCategoria">Cervezas</Link>
-            <Link to='/category/whiskies'className="btnCategoria">Whiskies</Link>
-            <Link to='/category/gin'className="btnCategoria">Gin</Link>
+            <NavLink to='/category/vinos'className={( { isActive } ) => isActive ? 'btnCategoria' : 'btnActivo'}>Vinos</NavLink>
+            <NavLink to='/category/cervezas'className={({ isActive }) => isActive ? 'btnCategoria' : 'btnActivo'}>Cervezas</NavLink>
+            <NavLink to='/category/whiskies'className={({ isActive }) => isActive ? 'btnCategoria' : 'btnActivo'}>Whiskies</NavLink>
+            <NavLink to='/category/gin'className={({ isActive }) => isActive ? 'btnCategoria' : 'btnActivo'}>Gin</NavLink>
           </div>
         </div>
       </nav>

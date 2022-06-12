@@ -3,9 +3,19 @@
     padding: 10px;
     color: white;
 }
-.menu_conteiner{
-    /* display: flex; */
+.categoryConteiner{
+    display: flex;
     background-Color:'black';
     padding: 10px;
     font-family: "Sans-Serif";
+    justify-content: space-around;
+    align-items: center;
 }
+.btnActive{
+    color: black;
+}
+/* .btnCategoria{
+    color: blue;
+    padding: 10px;
+    display: flex;
+} */
