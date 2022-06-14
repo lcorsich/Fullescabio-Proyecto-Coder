@@ -1,16 +1,16 @@
 
-.datoItem{
+/* .datoItem{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 300px;
     margin: auto;
-}
+} */
 .datoImg {
     width: 100px;
     height: 100px;
-    object-fit: cover;
+    /* object-fit: cover; */
     object-position: center;
 }
 .ConteinerItem{

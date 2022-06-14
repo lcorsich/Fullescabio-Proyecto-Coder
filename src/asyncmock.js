@@ -5,7 +5,7 @@ const products = [
     name: "D.V. Catena Malbec",
     price: "3000$",
     category: "vinos",
-    img: "./images/catena.png",
+    img: "/images/catena.png",
     stock: 10,
     description: "Vino Malbec - 2019 - 750ml",
     description2:
@@ -16,7 +16,7 @@ const products = [
     name: "Imperial IPA",
     price: "220$",
     category: "cervezas",
-    img: "./images/imperial.png",
+    img: "/images/imperial.png",
     stock: 220,
     description: "Cerveza IPA - 473ml",
     description2:
@@ -27,7 +27,7 @@ const products = [
     name: "Jack Daniels",
     price: "5500$",
     category: "whiskies",
-    img: "./images/jack.png",
+    img: "/images/jack.png",
     stock: 10,
     description: "Whisky 750ml",
     description2:
@@ -38,7 +38,7 @@ const products = [
     name: "Heraclito",
     price: "2250$",
     category: "gin",
-    img: "./images/hera.png",
+    img: "/images/hera.png",
     stock: 10,
     description: "Gin London Dry - 750ml",
     description2:

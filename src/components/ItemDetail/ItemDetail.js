@@ -3,7 +3,6 @@ import ItemCount from "../ItemCount/ItemCount";
 import { useContext } from "react";
 import { Context } from "../../App";
 
-
 const ItemDetail = ({  id, name, img, category, description2, price, stock,}) => {
 
   const { addItem } = useContext(Context)
@@ -24,7 +23,7 @@ const ItemDetail = ({  id, name, img, category, description2, price, stock,}) =>
         </header>
         <div className="ConteinerItem">
           <picture>
-          <img className="datoImg" src={img} alt={name} />
+          <img className="datoImg" src={img} alt='' />
           </picture>
           <section>
             <div className="datoItem">
