@@ -3,7 +3,7 @@ const products = [
   {
     id: "1",
     name: "D.V. Catena Malbec",
-    price: "3000",
+    price: "3000$",
     category: "vinos",
     img: "./images/catena.png",
     stock: 10,
@@ -14,7 +14,7 @@ const products = [
   {
     id: "2",
     name: "Imperial IPA",
-    price: "220",
+    price: "220$",
     category: "cervezas",
     img: "./images/imperial.png",
     stock: 220,
@@ -25,7 +25,7 @@ const products = [
   {
     id: "3",
     name: "Jack Daniels",
-    price: "5500",
+    price: "5500$",
     category: "whiskies",
     img: "./images/jack.png",
     stock: 10,
@@ -36,7 +36,7 @@ const products = [
   {
     id: "4",
     name: "Heraclito",
-    price: "2250",
+    price: "2250$",
     category: "gin",
     img: "./images/hera.png",
     stock: 10,
@@ -69,7 +69,6 @@ export const getProductsById = (id) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(products.find((prod) => prod.id === id));
-      // console.log(products)
     }, 500);
   });
 };

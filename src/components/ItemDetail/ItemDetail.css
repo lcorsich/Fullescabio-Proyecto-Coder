@@ -1,6 +1,18 @@
-.DetailItem{
+
+.datoItem{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    margin: auto;
 }
-/* .ImagenItem{
-    display: grid;
-} */
+.datoImg {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: center;
+}
+.ConteinerItem{
+    display: flexbox;
+}

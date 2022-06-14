@@ -1,0 +1,43 @@
+.Counter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    margin: auto;
+    text-align: -webkit-match-parent;
+    padding: 8px;
+}
+
+.btnCount{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.btn{
+    margin: 0 30px;
+    width: auto;
+    padding: 12px;
+    font-size: 8px;
+    background: cornflowerblue;
+    border-radius: 4px;
+    display: flex;
+    align-self: center;
+    flex-grow: 0;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #FFFFFF;
+    border: none;
+    border-style: none;
+    cursor: pointer;
+    outline: inherit;
+    font-size: smaller;
+}
+
+.numQuantity{
+    font-size: 20px;
+    padding: 20px;
+    margin: 0;
+    order: 1;
+}
