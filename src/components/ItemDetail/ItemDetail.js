@@ -1,11 +1,11 @@
 import "./ItemDetail.css";
 import ItemCount from "../ItemCount/ItemCount";
 import { useContext } from "react";
-import { Context } from "../../App";
+import CartContext from "../../context/cartContex";
 
 const ItemDetail = ({  id, name, img, category, description2, price, stock,}) => {
 
-  const { addItem } = useContext(Context)
+  const { addItem } = useContext(CartContext)
 
   const agregarCarro = (quantity) => {
     console.log(`se agregaron ${quantity} ${name}`)
