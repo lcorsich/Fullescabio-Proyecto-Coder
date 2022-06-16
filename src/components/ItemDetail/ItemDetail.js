@@ -1,15 +1,17 @@
 import "./ItemDetail.css";
 import ItemCount from "../ItemCount/ItemCount";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import CartContext from "../../context/cartContex";
+import { Link } from "react-router-dom";
 
 const ItemDetail = ({  id, name, img, category, description2, price, stock,}) => {
-
+  const [quantityAddCart, setQuantityAddCart] = useState(0)
   const { addItem } = useContext(CartContext)
 
   const agregarCarro = (quantity) => {
     console.log(`se agregaron ${quantity} ${name}`)
     addItem({id, name, price, quantity})
+    setQuantityAddCart(quantity)
     }
 
 
@@ -32,8 +34,11 @@ const ItemDetail = ({  id, name, img, category, description2, price, stock,}) =>
               <p> Precio : {price}</p>
             </div>
             <div className="ItemCount">
-              <ItemCount stock={stock} onAdd={agregarCarro}/>
-            </div>
+              {quantityAddCart === 0 
+              ? <ItemCount stock={stock} onAdd={agregarCarro}/>
+              : <Link to='/cart'>Terminar Compra</Link>
+              }
+              </div>
           </section>
         </div>
       </div>
