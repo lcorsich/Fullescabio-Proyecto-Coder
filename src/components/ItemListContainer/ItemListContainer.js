@@ -6,13 +6,13 @@ import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams} from 'react-router-dom'
 
 const ItemListContainer = (props) => {
-  const [products, setProducts] = useState([]);
-  const [cargando, setLoading] = useState(true)
+  const [products, setProducts] = useState([]); // Inicia el estado vacio
+  const [cargando, setLoading] = useState(true) // inicia estado en True
   // console.log(products)
   
   const { categoryId } = useParams()
 
-  useEffect(() => {
+  useEffect(() => { // se almacena en memoria - Se ejecuta luego del render 
 
     if(!categoryId){
     getProducts().then((response) => {
@@ -34,9 +34,9 @@ const ItemListContainer = (props) => {
           setLoading(false)
         })
       }
-      }, [categoryId]);
+      }, [categoryId]); // si hay un cambio de categoryId, se ejecuta de nuevo
  
-  console.log(products) // 
+  // console.log(products) // 
  
   if(cargando){
       return <h1>Cargando...</h1>
