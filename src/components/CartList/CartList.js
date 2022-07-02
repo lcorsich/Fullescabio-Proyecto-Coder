@@ -1,11 +1,11 @@
 
 import CartItem from "../CartItem/CartItem"
 
-const CartList = ({ cart }) => {
+const CartList = ({ products }) => {
     
     return (
         <div>
-            { cart.map(prod => <CartItem key={prod.id} {...prod}/>) }
+            { products.map(prod => <CartItem key={prod.id} {...prod}/>) }
         </div>
     )
 }

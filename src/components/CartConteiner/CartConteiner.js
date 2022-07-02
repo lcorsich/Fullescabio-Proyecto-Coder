@@ -14,7 +14,6 @@ const CartConteiner = () => {
     <div className="CartContainer">
       <div className="datoItem">
         <h1>CART LIST</h1>
-        
         <CartList  products={cart}/>
         {/* <h3>Total: ${total}</h3> */}
       </div>
