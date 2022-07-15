@@ -1,6 +1,10 @@
 
 
-Fullescabio Almacen de Bebidas - Proyecto Ecommerce
+## Fullescabio Almacen de Bebidas - Proyecto Ecommerce
+
+#Demo
+
+
 
 ![Demo-Fullescabio](https://user-images.githubusercontent.com/105563630/179255011-f4fa272c-816c-4f6f-babd-9d59009d30fd.gif)
 
@@ -21,7 +25,7 @@ Las Dependencias que utiliza la app son las siguientes:
 
 <Firebase ref='https://firebase.google.com/'>
 
-## Ejecuta el servidor de desarrollo
+# Ejecuta el servidor de desarrollo
 
 `npm start`
 
@@ -29,7 +33,7 @@ O también clonando el repositorio
 
 `$ git clone url`
 
-## Cómo se usa
+# Cómo se usa
 
 La estructura de la aplicación se compone de los siguientes componentes 
 
