@@ -1,38 +1,42 @@
-# Getting Started with Create React App
+
 
 Fullescabio Almacen de Bebidas - Proyecto Ecommerce
 
-### `clone`
+Tienda Ecommerce creada con el fin de realizar el proyecto final de Curso
 
-Se debe clonar el repositorio
 
 ### `npm install`
  
  Instala dependencias
 
-### `npm start`
+Las Dependencias que utiliza la app son las siguientes:
+
+<react-router-dom ref='https://www.npmjs.com/package/react-router-dom'>
+
+<sweetalert2 ref='https://sweetalert2.github.io/'>
+
+<Firebase ref='https://firebase.google.com/'>
+
+## Instalación
 
 Ejecuta el servidor de desarrollo
 
-Learn More
-You can learn more in the Create React App documentation.
+`npm start`
 
-To learn React, check out the React documentation.
+O también clonando el repositorio
 
-Code Splitting
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+`$ git clone url`
 
-Analyzing the Bundle Size
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+## Cómo se usa
 
-Making a Progressive Web App
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+La estructura de la aplicación se compone de los siguientes componentes 
 
-Advanced Configuration
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+    - ItemListContainer
+    - ItemDetailContainer
+    - CartContainer
+    - Checkout
 
-Deployment
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+Las ordenes generadas en el checkout, se registran en una base de datos de prueba, promovida por el servicio de Firebase
 
-npm run build fails to minify
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+

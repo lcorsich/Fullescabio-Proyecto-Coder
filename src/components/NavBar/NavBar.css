@@ -1,21 +1,30 @@
-.title{
-    background-Color: black;
-    padding: 10px;
-    color: white;
+.title {
+  background-color: black;
+  padding: 10px;
+  color: white;
 }
-.categoryConteiner{
-    display: flex;
-    background-Color:'black';
-    padding: 10px;
-    font-family: "Sans-Serif";
-    justify-content: space-around;
-    align-items: center;
+.categoryConteiner {
+  display: flex;
+  background-color: "black";
+  padding: 10px;
+  font-family: "Sans-Serif";
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
 }
-.btnActive{
-    color: black;
+.btnActive {
+  color: black;
 }
-.btnCategoria{
-    color: blue;
-    padding: 10px;
-    display: flex;
+.btnCategoria {
+  color: rgb(101, 153, 221);
+  padding: 10px;
+  display: flex;
+  font-size: 20px;
+}
+
+.btnActivo {
+  font-size: 18px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  text-transform: uppercase;
 }

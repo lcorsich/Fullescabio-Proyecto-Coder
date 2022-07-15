@@ -1,10 +1,8 @@
 import { useContext } from "react";
 import cartContex from "../../context/cartContex";
-
+import "./CartItem.css";
 const CartItem = ({ id, name, price, quantity }) => {
   const { removeItem } = useContext(cartContex);
-
-console.log(name)
 
   const Remove = (id) => {
     removeItem(id);
@@ -21,7 +19,7 @@ console.log(name)
       </section>
       <footer>
         <p>Subtotal: ${price * quantity}</p>
-        <button onClick={() => Remove(id)}>X</button>
+        <button className="btnRemoveItem" onClick={() => Remove(id)}>X</button>
       </footer>
     </article>
   );

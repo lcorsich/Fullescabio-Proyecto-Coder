@@ -22,28 +22,33 @@ const ItemDetail = ({
     setQuantityAddCart(quantity);
   };
 
-  // resibe por props el id y el nombre del producto
   return (
     <>
-      <div className="cardItem">
-        <header>
-          <h2>{name}</h2>
-        </header>
+      <div className="container">
         <div className="ConteinerItem">
-          <picture>
-            <img className="datoImg" src={img} alt="" />
-          </picture>
+          <div className="imgcontainer">
+            <img className="imgBx" src={img} alt="" />
+          </div>
           <section>
-            <div className="datoItem">
-              <p> Categoria : {category}</p>
-              <p> Descripción : {description2}</p>
-              <p> Precio : {price}</p>
+            <div className="details">
+              <div className="content">
+                <div className="content_h">
+                  <h2>{name}</h2>
+                  <div className="content_p">
+                    <p> Categoria : {category}</p>
+                    <p> Descripción : {description2}</p>
+                    <p className="formPrice"> {price}$ </p>
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="ItemCount">
               {quantityAddCart === 0 ? (
                 <ItemCount stock={stock} onAdd={agregarCarro} />
               ) : (
-                <Link to="/cart">Terminar Compra</Link>
+                <Link to="/cart" className="btn_terminar_compra">
+                  Terminar Compra
+                </Link>
               )}
             </div>
           </section>

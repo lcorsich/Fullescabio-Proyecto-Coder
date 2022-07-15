@@ -1,5 +1,33 @@
-.cartWidget{
-    height: 100%;
-    width: 100%;
+.cartWidget {
+  width: auto;
+  padding: 8px;
+  background: #b2b6be;
+  border-radius: 10px;
+  display: flex;
+  flex-grow: 10;
+  text-decoration: none;
+  border: none;
+  border-style: none;
+  cursor: pointer;
+  outline: inherit;
+  order: 1;
+  margin:auto;
+  justify-content: center;
+  width: fit-content;
+}
 
+.cartIcon {
+  margin-right: 10px;
+  max-width: 50px;
+}
+.cartWidget:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+.cartQuantity {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-weight: normal;
+  margin: 0;
+  padding-right: 10px;
 }

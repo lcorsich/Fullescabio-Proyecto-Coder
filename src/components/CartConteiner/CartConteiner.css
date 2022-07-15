@@ -1,0 +1,66 @@
+.conteinerList {
+    width: auto;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(138, 135, 135);
+}
+
+.titleProductAdd {
+  font-size: 30px;
+}
+
+.cartListConteiner {
+  background-color: rgb(151, 0, 0);
+  display: list-item;
+  grid-gap: 10px;
+  font-size: medium;
+  background-color: rgb(253, 253, 253);
+}
+
+.totalCart {
+  font-size: 25px;
+}
+
+.btnOrderCart {
+  margin: auto;
+  width: fit-content;
+  padding: 12px;
+  background: rgb(0, 0, 0);
+  border-radius: 10px;
+  display: flex;
+  flex-grow: 0;
+  text-decoration: none;
+  color: #ffffff;
+  border: none;
+  border-style: none;
+  cursor: pointer;
+  outline: inherit;
+  font-size: medium;
+}
+
+.cartProducts {
+  grid-row: auto;
+  background-color: rgb(0, 241, 241);
+}
+
+.btnCleanCart {
+  margin: auto;
+  width: fit-content;
+  padding: 10px;
+  background: rgb(0, 0, 0);
+  border-radius: 10px;
+  display: inline-block;
+  flex-grow: 0;
+  text-decoration: none;
+  color: #ffffff;
+  border: none;
+  border-style: none;
+  cursor: pointer;
+  outline: inherit;
+  font-size: medium;
+}
+.btnsCart{
+    width: auto;
+    display: flex;
+    justify-content: center;
+}

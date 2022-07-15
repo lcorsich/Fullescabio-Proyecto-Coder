@@ -1,20 +1,90 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getFirestore } from 'firebase/firestore'
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import {getFirestore , getDoc, getDocs, collection, where, query, doc, addDoc, writeBatch, documentId} from "firebase/firestore";
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAFEOIkJrJ1COIcMajMd06DuFDlR7JySds",
-  authDomain: "proyectoreact-592b3.firebaseapp.com",
-  projectId: "proyectoreact-592b3",
-  storageBucket: "proyectoreact-592b3.appspot.com",
-  messagingSenderId: "1013734352829",
-  appId: "1:1013734352829:web:ade0633fc6f392256f54d4"
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain:  process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_essagingSenderId,
+  appId: process.env.REACT_APP_appId,
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-export const db = getFirestore(app)
+export const db = getFirestore(app);
+
+
+////////////////////
+const ColectionOrders = "orders";
+const coleccionProductos = "productos";
+
+const refColeccionOrdenes = collection(db, ColectionOrders);
+const refColeccionProductos = collection(db, coleccionProductos);
+
+export const guardarOrden = (orden) => {
+  return añadirObjetoAFirestore(refColeccionOrdenes, orden);
+};
+
+export const guardarProducto = (producto) => {
+  return añadirObjetoAFirestore(refColeccionProductos, producto);
+};
+
+const añadirObjetoAFirestore = (refCollection, objeto) => {
+  return addDoc(refCollection, objeto);
+};
+
+export const getProductosCatalogo = (ids) => {
+  return getDocumentosByID(ids, refColeccionProductos);
+};
+
+const getDocumentosByID = (ids, refColeccion) => {
+  return getDocs(query(refColeccion, where(documentId(), "in", ids)));
+};
+
+export const confirmarOrden = (productosOrden) => {
+  const batch = writeBatch(db);
+
+  for (let prod of productosOrden) {
+    batch.update(prod.referencia, { stock: prod.nuevoStock });
+  }
+  batch.commit();
+};
+
+const getProductosFormateados = (productosFirebase) => {
+  const productosFormateados = productosFirebase.docs.map((prod) => {
+    return { id: prod.id, ...prod.data() };
+  });
+  return productosFormateados;
+};
+
+export const getProductos = () => {
+  return getDocs(refColeccionProductos).then((response) => {
+    return getProductosFormateados(response);
+  });
+};
+
+export const getProductosPorCategoria = (categoria) => {
+  return getDocs(
+    query(refColeccionProductos, where("categoria", "==", categoria))
+  )
+    .then((response) => {
+      const prods = getProductosFormateados(response);
+      return prods;
+    })
+    .catch((error) => {
+      console.log("el error es en el getDocs por categoria es: " + error);
+    });
+};
+
+export const getProductoPorId = (idProducto) => {
+  return getDoc(doc(db, coleccionProductos, idProducto))
+    .then((response) => {
+      return { id: response.id, ...response.data() };
+    })
+    .catch((error) => {
+      console.log("el articulo no existe: " + error);
+    });
+};
