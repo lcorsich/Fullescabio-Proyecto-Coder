@@ -2,12 +2,16 @@
 
 Fullescabio Almacen de Bebidas - Proyecto Ecommerce
 
+![Demo-Fullescabio](https://user-images.githubusercontent.com/105563630/179255011-f4fa272c-816c-4f6f-babd-9d59009d30fd.gif)
+
+
+
 Tienda Ecommerce creada con el fin de realizar el proyecto final de Curso
 
 
-### `npm install`
+Instalar dependencias
  
- Instala dependencias
+ ### `npm install`
 
 Las Dependencias que utiliza la app son las siguientes:
 
@@ -17,9 +21,7 @@ Las Dependencias que utiliza la app son las siguientes:
 
 <Firebase ref='https://firebase.google.com/'>
 
-## Instalación
-
-Ejecuta el servidor de desarrollo
+## Ejecuta el servidor de desarrollo
 
 `npm start`
 
